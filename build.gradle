@@ -1,0 +1,38 @@
+buildscript {
+	repositories {
+		jcenter()
+	}
+
+	dependencies {
+		classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
+	}
+}
+
+
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'application'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+
+mainClassName = 'automation.browser.JdkDownload'
+
+
+repositories {
+	jcenter()
+}
+
+
+dependencies {
+	compile group: 'org.slf4j',                 name: 'slf4j-api',       version: '1.7.25'
+	compile group: 'org.slf4j',                 name: 'slf4j-nop',       version: '1.7.25'
+	compile group: 'org.seleniumhq.selenium',   name: 'selenium-java',   version: '3.6.0'
+	compile group: 'net.lightbody.bmp',         name: 'browsermob-core', version: '2.1.5'
+	compile group: 'org.apache.httpcomponents', name: 'httpclient',      version: '4.5.3'
+}
+
+
+shadowJar {
+}
+
+

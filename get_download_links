@@ -1,0 +1,17 @@
+#!/bin/bash
+
+CONTAINER=$(docker run \
+  --rm \
+  --detach \
+  --publish 127.0.0.1:0:4444 \
+  selenium/standalone-chrome:3.6.0-copper)
+
+echo "Wait 5 seconds for browser startup..." 1>&2
+sleep 5s
+
+ADDRPORT=$(docker port $CONTAINER 4444)
+
+java -jar build/libs/oracle-java-download-all.jar --wd-url http://${ADDRPORT}/wd/hub $*
+
+docker stop $CONTAINER 1>&2
+
