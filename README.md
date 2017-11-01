@@ -2,7 +2,7 @@ Oracle JDK Download Links
 =========================
 
 **Note: By running this program you agree to the
-[Oracle Binary Code License Agreement for Java SE](http://www.oracle.com/technetwork/java/javase/terms/license/index.html)**
+[Oracle Binary Code License Agreement for Java SE](http://www.oracle.com/technetwork/java/javase/terms/license/index.html).**
 
 ## Dependencies
 
@@ -43,7 +43,7 @@ To get download links for JDK 9 execute
 The links are written to `stdout`. You can redirect the output to a file
 for further processing.
 
-Download using the generated links with `wget`
+Download using the generated links with `wget`, e.g.
 
 ```
 wget --header \
