@@ -4,7 +4,7 @@ Oracle JDK Download Links
 **Note: By running this program you agree to the
 [Oracle Binary Code License Agreement for Java SE](http://www.oracle.com/technetwork/java/javase/terms/license/index.html).**
 
-## Dependencies
+## Requirements
 
 Linux, JDK 8+, Docker
 
