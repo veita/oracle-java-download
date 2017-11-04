@@ -6,7 +6,9 @@ Oracle JDK Download Links
 
 ## Requirements
 
-Linux, JDK 8+, Docker
+Linux, JDK 8+, Docker with the
+[selenium/standalone-chrome](https://github.com/SeleniumHQ/docker-selenium)
+image.
 
 
 ## Introduction
@@ -38,6 +40,16 @@ To get download links for JDK 9 execute
 
 ```bash
 ./get_download_links JDK9
+```
+
+The following options are available:
+
+```
+  --wd-url <URL>           the web driver URL, e.g. http://127.0.0.1:4444/wd/hub
+  --proxy <PROXY>          optional proxy as host:port
+  --proxy-user <USER>      user name for proxy authentication; currently
+                           only basic authentication is supported
+  --proxy-pass <PASSWORD>  password for proxy authentication
 ```
 
 The links are written to `stdout`. You can redirect the output to a file
