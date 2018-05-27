@@ -36,10 +36,10 @@ To get download links for JDK 8 execute
 ./get_download_links JDK8
 ```
 
-To get download links for JDK 9 execute
+To get download links for JDK 10 execute
 
 ```bash
-./get_download_links JDK9
+./get_download_links JDK10
 ```
 
 The following options are available:

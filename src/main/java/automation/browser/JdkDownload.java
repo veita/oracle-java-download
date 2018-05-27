@@ -35,7 +35,7 @@ import net.lightbody.bmp.proxy.auth.AuthType;
 
 public final class JdkDownload
 {
-	private enum GROUP {JDK9, JDK8};
+	private enum GROUP {JDK8, JDK9, JDK10};
 
 
 	public static void main(String[] p_args)
@@ -109,10 +109,13 @@ public final class JdkDownload
 
 			switch (p_args[p_args.length - 1])
 			{
-				case "JDK9":
+				case "JDK10":
 					getDownloadLinks
-						(l_url, GROUP.JDK9, l_strProxyHost, l_iProxyPort, l_strProxyUser, l_strProxyPass);
+						(l_url, GROUP.JDK10, l_strProxyHost, l_iProxyPort, l_strProxyUser, l_strProxyPass);
 					break;
+
+				case "JDK9":
+					throw new UnsupportedOperationException("JDK9 download is no longer supported.");
 
 				case "JDK8":
 					getDownloadLinks
@@ -137,7 +140,7 @@ public final class JdkDownload
 
 	public static void showUsageAndExit(PrintStream p_out, int p_iExitCode)
 	{
-		p_out.println("automation.browser.JdkDownload --wd-url <url> [OPTION]... JDK8|JDK9");
+		p_out.println("automation.browser.JdkDownload --wd-url <url> [OPTION]... JDK8|JDK10");
 		p_out.println();
 		p_out.println("  --wd-url <URL>           the web driver URL, e.g. http://127.0.0.1:4444/wd/hub");
 		p_out.println("  --proxy <PROXY>          optional proxy as host:port");
@@ -196,8 +199,8 @@ public final class JdkDownload
 
 			switch (p_group)
 			{
-				case JDK9:
-					l_pageJdk = l_pageEntry.getJdk9Page();
+				case JDK10:
+					l_pageJdk = l_pageEntry.getJdk10Page();
 					break;
 
 				case JDK8:

@@ -30,8 +30,8 @@ public final class EntryPage extends AbstractPage
 	@FindBy(name = "JDK8")
 	private WebElement m_jdk8;
 
-	@FindBy(name = "JDK9")
-	private WebElement m_jdk9;
+	@FindBy(name = "JDK10")
+	private WebElement m_jdk10;
 
 
 	public EntryPage(WebDriver p_driver)
@@ -52,14 +52,14 @@ public final class EntryPage extends AbstractPage
 	}
 
 
-	public WebElement getJdk9Url()
+	public WebElement getJdk10Url()
 	{
-		return m_jdk9;
+		return m_jdk10;
 	}
 
 
-	public Jdk9Page getJdk9Page()
+	public Jdk10Page getJdk10Page()
 	{
-		return new Jdk9Page(this, getJdk9Url().getAttribute("href"));
+		return new Jdk10Page(this, getJdk10Url().getAttribute("href"));
 	}
 }
