@@ -14,7 +14,7 @@ image.
 ## Introduction
 
 The Oracle JDK Download Link tool creates a list of download links
-for current JDK versions that are available on [Oracle's website](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+for current JDK versions 8 and 10 that are available on [Oracle's website](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 The list can then be used to perform the actual download.
 
