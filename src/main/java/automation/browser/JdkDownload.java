@@ -24,7 +24,6 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.CapabilityType;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import net.lightbody.bmp.BrowserMobProxy;
@@ -165,10 +164,9 @@ public final class JdkDownload
 	                                     String p_strProxyPass)
 		throws Exception
 	{
-		final BrowserMobProxy     l_proxy;
-		final ChromeOptions       l_options;
-		final DesiredCapabilities l_capabilities;
-		final WebDriver           l_driver;
+		final BrowserMobProxy l_proxy;
+		final ChromeOptions   l_options;
+		final WebDriver       l_driver;
 
 		l_proxy = new BrowserMobProxyServer();
 
@@ -186,11 +184,10 @@ public final class JdkDownload
 
 		l_options = new ChromeOptions();
 
-		l_capabilities = DesiredCapabilities.chrome();
-		l_capabilities.setCapability(ChromeOptions.CAPABILITY, l_options);
-		l_capabilities.setCapability(CapabilityType.PROXY, ClientUtil.createSeleniumProxy(l_proxy));
+		l_options.setCapability(ChromeOptions.CAPABILITY, l_options);
+		l_options.setCapability(CapabilityType.PROXY, ClientUtil.createSeleniumProxy(l_proxy));
 
-		l_driver = new RemoteWebDriver(p_url, l_capabilities);
+		l_driver = new RemoteWebDriver(p_url, l_options);
 
 		try
 		{
