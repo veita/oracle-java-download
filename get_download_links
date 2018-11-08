@@ -4,7 +4,7 @@ CONTAINER=$(docker run \
   --rm \
   --detach \
   --publish 127.0.0.1:0:4444 \
-  selenium/standalone-chrome:3.6.0-copper)
+  selenium/standalone-chrome:3.141.5-astatine)
 
 echo "Wait 5 seconds for browser startup..." 1>&2
 sleep 5s
