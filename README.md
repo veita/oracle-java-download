@@ -16,7 +16,7 @@ image.
 ## Introduction
 
 The Oracle JDK Download Link tool creates a list of download links
-for current JDK versions 8 and 10 that are available on [Oracle's website](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+for current JDK versions 8 and 11 that are available on [Oracle's website](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 The list can then be used to perform the actual download.
 
@@ -36,12 +36,6 @@ To get download links for JDK 8 execute
 
 ```bash
 ./get_download_links JDK8
-```
-
-To get download links for JDK 10 execute
-
-```bash
-./get_download_links JDK10
 ```
 
 To get download links for JDK 11 execute
@@ -67,8 +61,8 @@ Download using the generated links with `wget`, e.g.
 
 ```
 wget --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-  http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.tar.gz
+  https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e45523244c269598db4e85c52e0c/jdk-8u191-linux-x64.tar.gz
 
 wget --header "Cookie: oraclelicense=accept-securebackup-cookie" \
-  http://download.oracle.com/otn-pub/java/jdk/11+28/55eed80b163941c8885ad9298e6d786a/jdk-11_linux-x64_bin.tar.gz
+  https://download.oracle.com/otn-pub/java/jdk/11.0.1+13/90cf5d8f370a4347a95050520eef3fb7/jdk-11.0.1_linux-x64_bin.tar.gz
 ```
