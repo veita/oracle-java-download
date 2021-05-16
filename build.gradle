@@ -19,7 +19,7 @@ mainClassName = 'automation.browser.JdkDownload'
 
 
 repositories {
-	jcenter()
+	mavenCentral()
 }
 
 
